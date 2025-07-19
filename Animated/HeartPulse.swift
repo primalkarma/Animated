@@ -75,6 +75,7 @@ struct HeartPulse: View {
                 }
             }
             Spacer()
+            PlayResetButton(animating: $pulsing)
         }
     }
 }
