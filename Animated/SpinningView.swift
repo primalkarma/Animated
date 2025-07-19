@@ -42,7 +42,6 @@ struct SpinningView: View {
                 }
             }
             Spacer()
-            PlayResetButton(animating: $isSpinning)
         }
     }
 }

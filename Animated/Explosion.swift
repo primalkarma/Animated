@@ -6,25 +6,7 @@
 //
 
 import SwiftUI
-struct PlayResetButton: View {
-    @Binding var animating: Bool
 
-    var body: some View {
-        Button {
-            animating.toggle()
-        } label: {
-            Text(animating ? "Reset" : "Play")
-                .font(.title2)
-                .fontWeight(.bold)
-                .foregroundColor(.white)
-                .padding(.vertical, 12)
-                .padding(.horizontal, 40)
-                .background(animating ? Color.red : Color.green)
-                .clipShape(Capsule())
-        }
-        .padding(.bottom)
-    }
-}
 
 struct Explosion: View {
     @State private var isExploded = false
@@ -50,7 +32,6 @@ struct Explosion: View {
                     .padding()
             }
             Spacer()
-           PlayResetButton(animating: $isExploded)
         }
     }
 }
